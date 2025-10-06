@@ -18,7 +18,7 @@ mongoose
     // useUnifiedTopology: true,
   })
   .then((con) => {
-    console.log(con.connections);
+    // console.log(con.connections);
     console.log("DB Connection Sucessfull");
   })
   .catch((err) => {
@@ -26,6 +26,8 @@ mongoose
   });
 
 const port = process.env.PORT || 1000;
+console.log("Running in:", process.env.NODE_ENV);
+
 
 const server = app.listen(port, () => {
   console.log(`App running on port, ${port}`);

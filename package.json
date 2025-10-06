@@ -4,8 +4,8 @@
   "description": "A mini (Auth0); an authentication & authorization service system",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "start-dev": "nodemon server.js",
+    "start": "cross-env NODE_ENV=development nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,10 +27,16 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "html-to-text": "^9.0.5",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.20.0",
     "mongoose": "^8.18.3",
     "morgan": "^1.10.1",
-    "nodemon": "^3.1.10"
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
